@@ -11,33 +11,25 @@
   </head>
   <body background="background.png">
     <div id="root"></div>
-
     <div id="container">
-      <center>
-        <div className="containerFluid">
-          <span>
-            <div id="login-button" className="snapBtn"></div>
-          </span>
-          <div>
-            <div id="profile" className="hidden">
-              <br /><br /><br /><br />
-              <br /><br /><br /><br />
-              <br /><br /><br /><br />
-              <br /><br /><br /><br />
-              <img id="picture" />
-              <br /><br />
-            </div>
-            <div style="display: none !important;" id="welcome"></div>
-            <button
-              id="nextPage"
-              style="display:none !important;"
-              class="assemblePageBtn"
-            >
-              <strong>Assemble!</strong>
-            </button>
+      <div className="containerFluid">
+        <span>
+          <div id="login-button" className="snapBtn"></div>
+        </span>
+        <div>
+          <div id="profile" className="hidden">
+            <img id="picture" />
           </div>
+          <div style="display: none !important;" id="welcome"></div>
+          <button
+            id="nextPage"
+            style="display:none !important;"
+            class="assemblePageBtn"
+          >
+            <strong>Assemble!</strong>
+          </button>
         </div>
-      </center>
+      </div>
     </div>
     <div class="my-bitmoji-stickerpicker-icon-target" id="bitmoji-shower"></div>
   </body>
@@ -53,8 +45,8 @@
             document.getElementById('profile').classList.remove('hidden');
             let snapPic = data['data']['me']['bitmoji']['avatar'];
             sessionStorage.setItem('snapPic', snapPic);
-            let snapName = data['data']['me']['displayName']
-            sessionStorage.setItem('snapName', snapName)
+            let snapName = data['data']['me']['displayName'];
+            sessionStorage.setItem('snapName', snapName);
             window.location.pathname = '/create';
           });
         }
