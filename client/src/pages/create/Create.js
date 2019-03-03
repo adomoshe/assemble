@@ -9,9 +9,10 @@ class Create extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submit = this.submit.bind(this);
   }
-
+  
   componentDidMount() {
     window.scrollTo(0, 0);
+    // var un = document.getElementById('welcome').textContent();
     document.getElementById('container').style.display = 'none';
   }
 
@@ -23,7 +24,7 @@ class Create extends Component {
       [name]: value
     });
   }
-
+  
   submit() {
     console.log(this.state);
 
@@ -48,7 +49,7 @@ class Create extends Component {
         
     }
   }
-
+  
   render() {
     return (
       <div className="card-container">
@@ -59,8 +60,8 @@ class Create extends Component {
           <div className="card col-sm-6 justify-content-center inputCard">
             <div className="card-body">
               <center>
-                <h1 className="card-title AsembleFont">Welcome (Name) !</h1>
-
+                <h1 className="card-title AsembleFont" id = "welcome">Welcome (Name) !</h1>
+                <div id  = "print_name"></div>
                 <h4 className="card-text AsembleFont">Let's Assemble!</h4>
               </center>
               <br />

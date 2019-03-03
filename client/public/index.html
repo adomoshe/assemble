@@ -10,6 +10,8 @@
     <title>Snapchat Login Demo</title>
   </head>
   <body background = "background.png">
+      
+ 
     <div id='root'></div>
     
     <div id="container">
@@ -30,6 +32,8 @@
               <img id="picture" ></img>
               <br><br>
             </div>
+          <div style = "display: none !important;"  id = "welcome"></div>
+          <button id = "nextPage" style = "display:none !important;" class = "assemblePageBtn"> <strong>Assemble!</strong> </button>
           
     </div>
       </div>
@@ -38,6 +42,7 @@
     
     
     </div>
+    <div class="my-bitmoji-stickerpicker-icon-target" id = "bitmoji-shower"></div> 
   </body>
   <script>
     window.snapKitInit = () => {
@@ -52,14 +57,25 @@
           snap.loginkit.fetchUserInfo().then(data => {
             document.getElementById("login-button").classList.add("hidden")
             document.getElementById("profile").classList.remove("hidden")
-
+            document.getElementById("login-button").onclick = changeInterface();
             document.getElementById("picture").src = data["data"]["me"]["bitmoji"]["avatar"]
             document.getElementById("welcome").innerHTML = "Welcome, " + data["data"]["me"]["displayName"] + "!"
           })
         },
       })
     }
+    function changeInterface()
+    {
+      document.getElementById("login-button").style.display = "none";
+      document.getElementById("nextPage").style.display = "block";
+      
+    }
+    document.getElementById("nextPage").onclick = assembleForm();
+    function assembleForm()
+    {
+      /// go to assemble form page
 
+    }
     // Load the SDK asynchronously
     (function (d, s, id) {
       var js, sjs = d.getElementsByTagName(s)[0];
@@ -68,5 +84,48 @@
       js.src = "https://sdk.snapkit.com/js/v1/login.js";
       sjs.parentNode.insertBefore(js, sjs);
     }(document, "script", "loginkit-sdk"));
+
+
+    window.snapKitInit = function () {
+        // Argument 1
+        var bitmojiWebPickerIconClass =
+          'my-bitmoji-stickerpicker-icon-target';
+
+        // Argument 2
+        var uiOptions = {
+          onStickerPickCallback:
+            function onStickerPickCallback(bitmojiImgURL){
+              console.log(bitmojiImgURL);
+            },
+          webpickerPosition: 'bottomRight',
+        };
+
+        // Argument 3
+        var loginParamsObj = {
+          clientId: 'c9aa7895-eb65-4cfa-a689-2ba745dfc62e',
+          redirectURI: 'http://localhost:3000/create',
+          scopeList: [ // the list of scopes you are approved for
+           'user.bitmoji.avatar',
+           'user.display_name',
+          ],
+        };
+
+        // Mount Bitmoji Icon(s)
+        snap.bitmojikit.mountBitmojiStickerPickerIcons(
+          bitmojiWebPickerIconClass,
+          uiOptions,
+          loginParamsObj,
+        );
+      }
+
+
+    // Load the SDK asynchronously
+    (function (d, s, id) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/login_bitmoji.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      }(document, 'script', 'bitmojikit-sdk'));
   </script>
 </html>
