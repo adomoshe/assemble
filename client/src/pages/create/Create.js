@@ -30,57 +30,71 @@ class Create extends Component {
   render() {
     return (
       <div className="">
-        <div className="card col-sm-6 justify-content-center">
+      <br></br>
+      <br></br>
+      <br></br>
+      <center>
+        <div className="card col-sm-6 justify-content-center inputCard">
           <div className="card-body">
-            <h1 className="card-title">Welcome (Name)</h1>
-            <p className="card-text">Let's Assemble!</p>
+          <center>
+            <h1 className="card-title AsembleFont">Welcome (Name) !</h1>
+            
+            <h4 className="card-text AsembleFont">Let's Assemble!</h4>
+            </center>
+            <br></br>
+            <br></br>
             <form>
               <div className="form-group">
-                <h2>What event are you assembling?</h2>
+                <h2 className = "AsembleFont" >What event are you assembling?</h2>
                 <input
                   name="event"
                   type="input"
-                  className="form-control"
+                  className="form-control inputCard"
                   placeholder="Enter Assembly"
                   onChange={this.handleInputChange}
                 />
               </div>
+              <br></br>
               <div className="form-group">
-                <h2>When is your event?</h2>
+                <h2 className = "AsembleFont">When is your event?</h2>
                 <input
                   name="date"
                   type="input"
-                  className="form-control"
+                  className="form-control inputCard"
                   placeholder="Enter Assembly"
                   onChange={this.handleInputChange}
                 />
               </div>
+              <br></br>
               <div className="form-group">
-                <h2>Where are you assembling?</h2>
+                <h2 className = "AsembleFont">Where are you assembling?</h2>
                 <input
                   name="location"
                   type="input"
-                  className="form-control"
+                  className="form-control inputCard"
                   placeholder="Enter Assembly"
                   onChange={this.handleInputChange}
                 />
               </div>
+              <br></br>
               <div className="form-group">
-                <h2>Description (Optional)</h2>
+                <h2 className = "AsembleFont">Description (Optional)</h2>
                 <input
                 name='description'
                   type="input"
-                  className="form-control"
+                  className="form-control inputCard"
                   placeholder="Describe the purpose of your Assembly"
                   onChange={this.handleInputChange}
                 />
               </div>
-              <button type="button" className="btn btn-primary" onClick={this.submit}>
-                Submit
+              <br></br>
+              <button type="button" className="btn btn-primary submitBtn" onClick={this.submit}>
+                <strong>Submit</strong>
               </button>
             </form>
           </div>
         </div>
+        </center>
       </div>
     );
   }
