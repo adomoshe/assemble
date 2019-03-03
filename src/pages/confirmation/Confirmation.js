@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
+import logo3 from '../../logo3.svg';
 
 const styles = { logo: { height: '10vh', width: '60vh' } };
 
 class Confirmation extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+    document.getElementById('container').style.display = 'none';
   }
 
   render() {
     return (
-      <div id = "container">
-            <h1>
-                Your Asembly has been schedules!
-            </h1>
-            <br></br>
-            <br></br>
-            <table id = "eventsTable">
-                <thead>
-                    <tr>
-                        <td>Time:</td> &nbsp;
-                        <td> Location: </td> &nbsp;
-                        <td> Accesiblity:</td> &nbsp;
-
-                    </tr>
-                </thead>
-                <tbody id = "plannedAsemblies">
-
-                </tbody>
-            </table>
+      <div id="container">
+        <h1>Your <img src={logo3} alt="assemble SVG" style={styles.logo} /> has been scheduled!</h1>
+        <br />
+        <br />
+        <table id="eventsTable">
+          <thead>
+            <tr>
+              <td>Time:</td>
+              <td>Location:</td>
+              <td>Accessibility:</td>
+            </tr>
+          </thead>
+          <tbody id="plannedAsemblies" />
+        </table>
       </div>
     );
   }

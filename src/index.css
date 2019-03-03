@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url('./backgroundtemp.svg');
   margin: 0;
@@ -8,10 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+
 .AsembleFont
 {
   /* Andale Mono */

@@ -11,21 +11,16 @@
   </head>
   <body>
     <div id='root'></div>
-
     <div id="container">
-
       <center>
       <div id="login-button" className = "snapBtn"></div>
-      <div id="profile" class="hidden">
+      <div id="profile" className="hidden">
         <br>
         <br>
         <br>
         <img id="picture" src="#"></img>
         <br><br><br>
-        <p id="welcome">Welcome!</p>
       </div>
-      <br><br><br><br><br><br><br>
-      <button class = "AsembleFont asembleBtn" onClick = "asembleEvent()"><strong>Asemble an Event</strong></Asemble></button>
     </center>
     </div>
   </body>
@@ -58,10 +53,5 @@
       js.src = "https://sdk.snapkit.com/js/v1/login.js";
       sjs.parentNode.insertBefore(js, sjs);
     }(document, "script", "loginkit-sdk"));
-
-    asembleEvent()
-    {
-      window.location = "src/pages/create/Create.js";
-    }
   </script>
 </html>
