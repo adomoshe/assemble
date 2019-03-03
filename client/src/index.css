@@ -9,6 +9,15 @@
   border: 1.5px solid black !important;
   border-radius: 10px !important;
 }
+.assemblePageBtn
+{
+  border: 6px solid #215AB7 !important;
+border-radius: 12px !important;
+height: 45% !important;
+width: 100% !important;
+color: white !important;
+background-color: #007BFF;
+}
 .submitBtn
 {
   border: 6px solid #215ab7 !important;
