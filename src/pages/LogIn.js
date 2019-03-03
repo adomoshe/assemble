@@ -6,17 +6,12 @@ class LogIn extends Component {
     }
     render() {
       return (
-        <div id = "container">
-          <div id = "header">
-          <center>
-            <br></br>
-            <h1> Welcome to Assemble</h1>
-            <br></br>
-            <div id="my-login-button-target" ></div>/>
-            </center>
-          </div>
-          <div id = "body">
-
+        <div id="container">
+          <div id="login-button"></div>
+          <div id="profile" className="hidden">
+            <img id="picture" src="#"></img> 
+            <p id="welcome">Welcome!</p>
+            <h3> hello</h3>
           </div>
         </div>
       );
