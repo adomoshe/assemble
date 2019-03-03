@@ -6,29 +6,42 @@ import API from '../../utils/API';
 const styles = { logo: { height: '10vh', width: '60vh' } };
 
 class Confirmation extends Component {
+  componentWillMount() {
+    API.getEvents().then(res => this.setState({ events: res }));
+  }
   componentDidMount() {
     window.scrollTo(0, 0);
     document.getElementById('container').style.display = 'none';
-
-    API.getEvents().then(res => this.setState({res: res}))
   }
 
   render() {
+    const events = this.state.events;
+
     return (
       <div id="container">
-        <h1>Your <img src={logo3} alt="assemble SVG" style={styles.logo} /> has been scheduled!</h1>
+        <h1>
+          Your <img src={logo3} alt="assemble SVG" style={styles.logo} /> has
+          been scheduled!
+        </h1>
         <br />
         <br />
-        <table id="eventsTable">
-          <thead>
-            <tr>
-              <td>Time:</td>
-              <td>Location:</td>
-              <td>Accessibility:</td>
-            </tr>
-          </thead>
-          <tbody id="plannedAsemblies" />
-        </table>
+        {events.map((event, index) => {
+          return (
+            <table id="eventsTable">
+              <thead>
+                <tr>
+                  <td>Title: {event.title}</td>
+                  <td>Date: {event.date}</td>
+                  <td>Location: {event.location}</td>
+                  {event.description && (
+                    <td>Description: {event.description}</td>
+                  )}
+                </tr>
+              </thead>
+              <tbody id="plannedAsemblies" />
+            </table>
+          );
+        })}
       </div>
     );
   }
