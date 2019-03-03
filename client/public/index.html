@@ -37,7 +37,7 @@
     window.snapKitInit = () => {
       snap.loginkit.mountButton('login-button', {
         clientId: '203244e5-5b0f-4628-a29c-96ad95e105e4',
-        redirectURI: 'https://assemble-snap.herokuapp.com/', //http://localhost:3000/
+        redirectURI: 'http://localhost:3000/',
         scopeList: ['user.display_name', 'user.bitmoji.avatar'],
         handleResponseCallback: () => {
           snap.loginkit.fetchUserInfo().then(data => {
