@@ -6,6 +6,7 @@ class Create extends Component {
     this.state = {};
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +23,10 @@ class Create extends Component {
     });
   }
 
+  submit() {
+    
+  }
+
   render() {
     return (
       <div className="">
@@ -31,8 +36,9 @@ class Create extends Component {
             <p className="card-text">Let's Assemble!</p>
             <form>
               <div className="form-group">
-                <h2>What are you assembling?</h2>
+                <h2>What event are you assembling?</h2>
                 <input
+                  name="event"
                   type="input"
                   className="form-control"
                   placeholder="Enter Assembly"
@@ -40,15 +46,36 @@ class Create extends Component {
                 />
               </div>
               <div className="form-group">
-                <h2>Description </h2>
+                <h2>When is your event?</h2>
                 <input
+                  name="date"
+                  type="input"
+                  className="form-control"
+                  placeholder="Enter Assembly"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <h2>Where are you assembling?</h2>
+                <input
+                  name="location"
+                  type="input"
+                  className="form-control"
+                  placeholder="Enter Assembly"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <h2>Description (Optional)</h2>
+                <input
+                name='description'
                   type="input"
                   className="form-control"
                   placeholder="Describe the purpose of your Assembly"
                   onChange={this.handleInputChange}
                 />
               </div>
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary" onClick={this.submit}>
                 Submit
               </button>
             </form>
