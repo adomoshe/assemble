@@ -18,10 +18,28 @@ class LogIn extends Component {
         <img src={logo2} alt="assemble SVG" style={styles.logo} />
         <img src={logo3} alt="assemble SVG" style={styles.logo} />
         <div id="container">
+      <br><br>
+      <center>
+        {/* <strong> */}
+            <h1 class = "AsembleFont">
+             
+              Welcome to Asemble
+              
+            </h1>
+            <br><br>
+            <ul class = "AsembleFont">
+              <li>•  Plan hangouts with your friends</li>
+              <br>
+              <li>•  Organize events for your community</li>
+              <br>
+              <li> •  Assemble with your surroundings</li>
+            {/* </strong> */}
+            </ul>
+    </center>
+
           <div id="login-button" />
           <div id="profile" className="hidden">
-            <p id="welcome">Welcome!</p>
-            <h3> hello</h3>
+            {/* <p id="welcome">Welcome!</p> */}
           </div>
         </div>
       </div>
