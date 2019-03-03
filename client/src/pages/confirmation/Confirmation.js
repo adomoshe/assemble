@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import logo3 from '../../logo3.svg';
 
+import API from '../../utils/API';
+
 const styles = { logo: { height: '10vh', width: '60vh' } };
 
 class Confirmation extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     document.getElementById('container').style.display = 'none';
+
+    API.getEvents()
   }
 
   render() {

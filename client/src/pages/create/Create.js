@@ -4,7 +4,7 @@ import API from '../../utils/API';
 class Create extends Component {
   constructor(props) {
     super(props);
-    this.state = { event: '', date: '', location: '', description: '' };
+    this.state = { title: '', date: '', location: '', description: '' };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submit = this.submit.bind(this);
@@ -31,7 +31,7 @@ class Create extends Component {
       alert('Fill out all information!');
     } else {
       API.saveEvent({
-        event: this.state.event,
+        title: this.state.title,
         date: this.state.date,
         location: this.state.location,
         description: this.state.description
@@ -41,7 +41,7 @@ class Create extends Component {
     }
 
     this.setState({
-      event: '',
+      title: '',
       date: '',
       location: '',
       description: ''
@@ -70,7 +70,7 @@ class Create extends Component {
                     What event are you assembling?
                   </h2>
                   <input
-                    name="event"
+                    name="title"
                     type="input"
                     className="form-control inputCard"
                     placeholder="Enter Assembly"

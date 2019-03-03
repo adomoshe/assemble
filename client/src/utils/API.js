@@ -2,9 +2,8 @@ import axios from 'axios';
 
 export default {
   // Gets the events
-  getEvents: function(eventInfo) {
-    console.log('eventInfo: ', eventInfo);
-    return axios.get('/api/events' + eventInfo);
+  getEvents: function() {
+    return axios.get('/api/events');
   },
 
   // Saves am event to the database
