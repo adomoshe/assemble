@@ -8,21 +8,18 @@ module.exports = app => {
       where: {
         title: req.body.title,
         date: req.body.date,
-        location: req.body.event,
+        location: req.body.location,
         description: req.body.description
       }
     }).then(event => {
-      if (event[1] == 'true') {
-        console.log('Created');
-        res.json('Created');
-      } else {
-        res.json('Not Created');
-      }
+      console.log(event);
+      console.log('Created');
+      res.json('Created');
     });
   });
 
   app.get('/api/events', (req, res) => {
-    db.Event.findALl({}).then(events => {
+    db.Event.findAll().then(events => {
       console.log(events);
       res.json(events);
     });

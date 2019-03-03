@@ -6,7 +6,7 @@ const db = require('./models');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require('./routes/api-routes.js')(app);
+require('./routes/api-routes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -14,11 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // Start the API server
-app.listen(PORT, () => {
-  console.log(`API Server now listening on PORT ${PORT}!`);
-});
 
-db.sequelize.sync().then(() => {
+db.sequelize.sync().then(function() {
   app.listen(PORT, () => {
     console.log(`App listening on PORT ${PORT}`);
   });
