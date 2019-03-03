@@ -27,7 +27,7 @@ class Create extends Component {
   submit() {
     console.log(this.state);
 
-    if (!this.state.event || !this.state.date || !this.state.location) {
+    if (!this.state.title || !this.state.date || !this.state.location) {
       alert('Fill out all information!');
     } else {
       API.saveEvent({
@@ -36,16 +36,16 @@ class Create extends Component {
         location: this.state.location,
         description: this.state.description
       })
-        .then(res => console.log(res))
+        .then(
+          this.setState({
+            title: '',
+            date: '',
+            location: '',
+            description: ''
+          })
+        )
         .catch(err => console.log(err));
     }
-
-    this.setState({
-      title: '',
-      date: '',
-      location: '',
-      description: ''
-    });
   }
 
   render() {
@@ -72,6 +72,7 @@ class Create extends Component {
                   <input
                     name="title"
                     type="input"
+                    value={this.state.title}
                     className="form-control inputCard"
                     placeholder="Enter Assembly"
                     onChange={this.handleInputChange}
@@ -83,6 +84,7 @@ class Create extends Component {
                   <input
                     name="date"
                     type="input"
+                    value={this.state.date}
                     className="form-control inputCard"
                     placeholder="Enter Assembly"
                     onChange={this.handleInputChange}
@@ -94,6 +96,7 @@ class Create extends Component {
                   <input
                     name="location"
                     type="input"
+                    value={this.state.location}
                     className="form-control inputCard"
                     placeholder="Enter Assembly"
                     onChange={this.handleInputChange}
@@ -105,6 +108,7 @@ class Create extends Component {
                   <input
                     name="description"
                     type="input"
+                    value={this.state.description}
                     className="form-control inputCard"
                     placeholder="Describe the purpose of your Assembly"
                     onChange={this.handleInputChange}

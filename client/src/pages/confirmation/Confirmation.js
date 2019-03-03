@@ -10,7 +10,7 @@ class Confirmation extends Component {
     window.scrollTo(0, 0);
     document.getElementById('container').style.display = 'none';
 
-    API.getEvents()
+    API.getEvents().then(res => this.setState({res: res}))
   }
 
   render() {
