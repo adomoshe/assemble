@@ -4,9 +4,9 @@ import logo3 from '../../logo3.svg';
 import API from '../../utils/API';
 
 const styles = {
-  div: { float: 'left', margin: '4vh', padding: '2vh', color: 'rgba' },
+  div: { float: 'left', margin: '2vh', padding: '2vh', color: 'rgba' },
   header: { marginTop: '4vh' },
-  logo: { height: '10vh', width: '60vh' }
+  logo: { height: '10vh', width: '60vh', marginBottom: '3vh' }
 };
 
 class Confirmation extends Component {

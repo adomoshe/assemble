@@ -65,12 +65,12 @@ class Create extends Component {
 
     return (
       <div className='row justify-content-center'>
-            <img src={snapPic} alt='bitmoji' style={styles.bitmoji}/>
       <div className='col-sm-6'>
         <center>
           <div className="card justify-content-center inputCard">
             <div className="card-body">
               <center>
+              <img src={snapPic} alt='bitmoji' style={styles.bitmoji}/>
                 <h1 className="card-title AsembleFont" id = "welcome">Welcome {snapName}</h1>
                 <h4 className="card-text AsembleFont">Let's Assemble!</h4>
               </center>
