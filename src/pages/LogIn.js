@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+import logo1 from '../logo1.svg';
+import logo2 from '../logo2.svg';
+import logo3 from '../logo3.svg';
+
+const styles = { logo: { height: '10vh', width: '60vh' } };
+
 class LogIn extends Component {
     componentDidMount() {
       window.scrollTo(0, 0);
@@ -19,6 +25,8 @@ class LogIn extends Component {
         </div>
       );
     }
-  }
 
-  export default LogIn;
+  }
+}
+
+export default LogIn;
