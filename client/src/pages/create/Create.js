@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 import API from '../../utils/API';
 
+const styles = {
+  bitmoji: {
+    left: 0,
+    width: '15vh',
+    height: '15vh'
+  }
+}
+
 class Create extends Component {
   constructor(props) {
     super(props);
@@ -56,17 +64,14 @@ class Create extends Component {
     const snapName = sessionStorage.getItem('snapName');
 
     return (
-      <div className="card-container">
-      <img src={snapPic} alt='bitmoji' />
-        <br></br>
-        <br></br>
-        <br></br>
+      <div className='row justify-content-center'>
+            <img src={snapPic} alt='bitmoji' style={styles.bitmoji}/>
+      <div className='col-sm-6'>
         <center>
-          <div className="card col-sm-6 justify-content-center inputCard">
+          <div className="card justify-content-center inputCard">
             <div className="card-body">
               <center>
                 <h1 className="card-title AsembleFont" id = "welcome">Welcome {snapName}</h1>
-                <div id  = "print_name"></div>
                 <h4 className="card-text AsembleFont">Let's Assemble!</h4>
               </center>
               <br />
@@ -133,6 +138,7 @@ class Create extends Component {
             </div>
           </div>
         </center>
+      </div>
       </div>
     );
   }
