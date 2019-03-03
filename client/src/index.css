@@ -90,4 +90,7 @@ body {
 
 #login-button button {
   cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: 900;
 }
