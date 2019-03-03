@@ -24,18 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "description": "Assemble!",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adomoshe/assemble.git"
-  },
-  "author": "Shahaf Dan, Adoran Moshe",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/adomoshe/assemble/issues"
-  },
-  "homepage": "https://github.com/adomoshe/assemble#readme"
+  ]
 }
