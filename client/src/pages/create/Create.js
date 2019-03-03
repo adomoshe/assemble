@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
+
 import API from '../../utils/API';
 
 class Create extends Component {
@@ -9,7 +11,7 @@ class Create extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submit = this.submit.bind(this);
   }
-  
+
   componentDidMount() {
     window.scrollTo(0, 0);
     // var un = document.getElementById('welcome').textContent();
@@ -24,7 +26,7 @@ class Create extends Component {
       [name]: value
     });
   }
-  
+
   submit() {
     console.log(this.state);
 
@@ -43,13 +45,13 @@ class Create extends Component {
             date: '',
             location: '',
             description: ''
-          })
+          }),
+          window.location.pathname = '/confirmation'
         )
         .catch(err => console.log(err));
-        
     }
   }
-  
+
   render() {
     return (
       <div className="card-container">
