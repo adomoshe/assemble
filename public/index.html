@@ -15,15 +15,17 @@
     <div id="container">
 
       <center>
-      <div id="login-button"></div>
+      <div id="login-button" className = "snapBtn"></div>
       <div id="profile" class="hidden">
         <br>
         <br>
         <br>
         <img id="picture" src="#"></img>
         <br><br><br>
-        <!-- <p id="welcome">Welcome!</p> -->
+        <p id="welcome">Welcome!</p>
       </div>
+      <br><br><br><br><br><br><br>
+      <button class = "AsembleFont asembleBtn" onClick = "asembleEvent()"><strong>Asemble an Event</strong></Asemble></button>
     </center>
     </div>
   </body>
@@ -31,7 +33,7 @@
     window.snapKitInit = () => {
       snap.loginkit.mountButton("login-button", {
         clientId: "203244e5-5b0f-4628-a29c-96ad95e105e4",
-        redirectURI: "http://localhost:3000",
+        redirectURI: "http://localhost:3000/",
         scopeList: [
           "user.display_name",
           "user.bitmoji.avatar",
@@ -56,5 +58,10 @@
       js.src = "https://sdk.snapkit.com/js/v1/login.js";
       sjs.parentNode.insertBefore(js, sjs);
     }(document, "script", "loginkit-sdk"));
+
+    asembleEvent()
+    {
+      window.location = "src/pages/create/Create.js";
+    }
   </script>
 </html>

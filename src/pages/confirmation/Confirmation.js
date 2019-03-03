@@ -9,8 +9,25 @@ class Confirmation extends Component {
 
   render() {
     return (
-      <div>
+      <div id = "container">
+            <h1>
+                Your Asembly has been schedules!
+            </h1>
+            <br></br>
+            <br></br>
+            <table id = "eventsTable">
+                <thead>
+                    <tr>
+                        <td>Time:</td> &nbsp;
+                        <td> Location: </td> &nbsp;
+                        <td> Accesiblity:</td> &nbsp;
 
+                    </tr>
+                </thead>
+                <tbody id = "plannedAsemblies">
+
+                </tbody>
+            </table>
       </div>
     );
   }

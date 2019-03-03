@@ -16,6 +16,20 @@ body {
   /* Andale Mono */
   font-family: "Andale Mono";
 }
+.snapBtn
+{
+  border: 2px solid black !important;
+}
+.asembleBtn
+{
+  height: 30% !important;
+  padding: 7px;
+  background-color: gray;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 25px !important;
+
+}
 .hidden {
   display: block;
 }
