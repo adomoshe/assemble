@@ -45,15 +45,16 @@ class Create extends Component {
           })
         )
         .catch(err => console.log(err));
+        
     }
   }
 
   render() {
     return (
-      <div className="">
-        <br />
-        <br />
-        <br />
+      <div className="card-container">
+        <br></br>
+        <br></br>
+        <br></br>
         <center>
           <div className="card col-sm-6 justify-content-center inputCard">
             <div className="card-body">
