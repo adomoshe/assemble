@@ -35,8 +35,6 @@ class Create extends Component {
   }
 
   submit() {
-    console.log(this.state);
-
     if (!this.state.title || !this.state.date || !this.state.location) {
       alert('Fill out all information!');
     } else {

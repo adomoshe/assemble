@@ -8,8 +8,6 @@ export default {
 
   // Saves am event to the database
   saveEvent: function(newEvent) {
-    console.log('trying to save event!');
-    console.log('newEvent', newEvent);
     return axios.post('/api/event', newEvent);
   }
 };
