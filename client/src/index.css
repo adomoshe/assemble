@@ -41,6 +41,11 @@ body {
   /* font-family: "Lucida Grande"; */
   font-family: "Comic Sans MS" !important;
 }
+
+.card
+{
+  background-color : rgba(255, 255, 255, .80);
+}
 .frame
 {
   background-color: #FFFF00 !important; /* Snap Chat Yellow */
@@ -50,6 +55,17 @@ body {
   font-family: "Comic Sans MS" !important;
 
 }
+.card-container
+{
+  background-image: url("./background2.png")!important; 
+  height: 100% !important;
+  width: 105% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 0px !important;
+  margin: 0px !important; 
+  } 
 .picture
 {
   margin: 20px !important;

@@ -38,6 +38,7 @@ class Create extends Component {
       })
         .then(res => console.log(res))
         .catch(err => console.log(err));
+        
     }
 
     this.setState({
@@ -50,10 +51,10 @@ class Create extends Component {
 
   render() {
     return (
-      <div className="">
-        <br />
-        <br />
-        <br />
+      <div className="card-container">
+        <br></br>
+        <br></br>
+        <br></br>
         <center>
           <div className="card col-sm-6 justify-content-center inputCard">
             <div className="card-body">
