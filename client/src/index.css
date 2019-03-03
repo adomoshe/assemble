@@ -9,9 +9,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'Helvetica Neue LT Std Roman';
+  font-weight: 2000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,21 +37,15 @@ body {
   width: 30%;
 }
 
-.AsembleFont {
-  /* Andale Mono */
-  /* font-family: "Lucida Grande"; */
-  font-family: 'Comic Sans MS';
-}
-
 .card {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .frame {
-  background-color: #ffff00; /* Snap Chat Yellow */
-  border: 4px solid rgb(187, 206, 22);
-  border-radius: 25px;
-  padding: 5px;
+  background-color: rgba(255, 252, 0, 1); /* Snap Chat Yellow */
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 2vh;
   margin-bottom: 4vh;
   margin-top: 2vh;
   font-family: 'Comic Sans MS';
@@ -93,5 +88,4 @@ body {
 
 #login-button button {
   cursor: pointer;
-  font-family: Helvetica, Arial, sans-serif;
 }
