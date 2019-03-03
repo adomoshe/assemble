@@ -1,34 +1,31 @@
 {
-  "name": "assemble",
-  "version": "0.1.0",
-  "private": true,
+  "name": "Assemble",
+  "version": "1.0.0",
+  "description": "Assemble!",
+  "main": "server.js",
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "express": "^4.16.4",
+    "if-env": "^1.0.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "description": "Assemble!",
-  "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adomoshe/assemble.git"
   },
+  "keywords": [],
   "author": "Shahaf Dan, Adoran Moshe",
   "license": "ISC",
   "bugs": {
