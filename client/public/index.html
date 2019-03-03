@@ -37,7 +37,7 @@
     window.snapKitInit = () => {
       snap.loginkit.mountButton('login-button', {
         clientId: '203244e5-5b0f-4628-a29c-96ad95e105e4',
-        redirectURI: 'http://assemble-snap.herokuapp.com/', //http://localhost:3000/
+        redirectURI: 'https://assemble-snap.herokuapp.com/', //http://localhost:3000/
         scopeList: ['user.display_name', 'user.bitmoji.avatar'],
         handleResponseCallback: () => {
           snap.loginkit.fetchUserInfo().then(data => {
@@ -78,7 +78,7 @@
       // Argument 3
       var loginParamsObj = {
         clientId: 'c9aa7895-eb65-4cfa-a689-2ba745dfc62e',
-        redirectURI: 'http://localhost:3000/confirmation',
+        redirectURI: 'http://localhost:3000/confirmation/',
         scopeList: [
           // the list of scopes you are approved for
           'user.bitmoji.avatar',
