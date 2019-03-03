@@ -14,32 +14,21 @@ class LogIn extends Component {
   render() {
     return (
       <div>
-        <img src={logo1} alt="assemble SVG" style={styles.logo} />
-        <img src={logo2} alt="assemble SVG" style={styles.logo} />
-        <img src={logo3} alt="assemble SVG" style={styles.logo} />
-        <div id="container">
-      <br><br>
-      <center>
-        {/* <strong> */}
-            <h1 class = "AsembleFont">
-             
-              Welcome to Asemble
-              
-            </h1>
-            <br><br>
-            <ul class = "AsembleFont">
-              <li>•  Plan hangouts with your friends</li>
-              <br>
-              <li>•  Organize events for your community</li>
-              <br>
-              <li> •  Assemble with your surroundings</li>
-            {/* </strong> */}
+        <div>
+          <img src={logo1} alt="assemble SVG" style={styles.logo} />
+          <img src={logo2} alt="assemble SVG" style={styles.logo} />
+          <img src={logo3} alt="assemble SVG" style={styles.logo} />
+          <div id="container">
+            <h1 class="AsembleFont">Welcome to Asemble</h1>
+            <ul class="AsembleFont">
+              <li>Plan hangouts with your friends</li>
+              <li>Organize events for your community</li>
+              <li> Assemble with your surroundings</li>
             </ul>
-    </center>
-
-          <div id="login-button" />
-          <div id="profile" className="hidden">
-            {/* <p id="welcome">Welcome!</p> */}
+            <div id="login-button" />
+            <div id="profile" className="hidden">
+              {/* <p id="welcome">Welcome!</p> */}
+            </div>
           </div>
         </div>
       </div>
