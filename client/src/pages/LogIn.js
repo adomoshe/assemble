@@ -9,6 +9,9 @@ const styles = { logo: { height: '10vh', width: '60vh' } };
 class LogIn extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+    var elem = document.getElementById('picture');
+    elem.style.top = "50px";
+    elem.style.left = "50px";
   }
 
   render() {
@@ -16,12 +19,25 @@ class LogIn extends Component {
       <div>
         <div>
           <div id="container">
-            <h1 className="AsembleFont">Welcome to <img src={logo3} alt="assemble SVG" style={styles.logo} /></h1>
+            <h1 className="AsembleFont"><strong>Welcome to </strong><img src={logo3} alt="assemble SVG" style={styles.logo} /></h1>
+            <br></br>
+            <br></br>
+            <br></br> 
+                   <center>  
             <ul className="AsembleFont">
-              <li>Plan hangouts with your friends</li>
-              <li>Organize events for your community</li>
-              <li>Assemble with your surroundings</li>
+              <li className = "frame" id = "moveRight"><strong>Plan hangouts with your friends</strong></li>
+              <br></br>
+            <br></br> 
+              <li className = "frame" id = "moveLeft"><strong>Organize events for your surroundings</strong></li>
+              <br></br>
+            <br></br> 
+              <li className = "frame" id = "moveRight" > <strong>Assemble with your Community</strong></li>
             </ul>
+            </center> 
+            <br></br>
+            <br></br>
+            <br></br> 
+            
             <div id="login-button" />
             <div id="profile" className="hidden">
             </div>
