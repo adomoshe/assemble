@@ -52,8 +52,12 @@ class Create extends Component {
   }
 
   render() {
+    const snapPic = sessionStorage.getItem('snapPic');
+    const snapName = sessionStorage.getItem('snapName');
+
     return (
       <div className="card-container">
+      <img src={snapPic} alt='bitmoji' />
         <br></br>
         <br></br>
         <br></br>
@@ -61,7 +65,7 @@ class Create extends Component {
           <div className="card col-sm-6 justify-content-center inputCard">
             <div className="card-body">
               <center>
-                <h1 className="card-title AsembleFont" id = "welcome">Welcome (Name) !</h1>
+                <h1 className="card-title AsembleFont" id = "welcome">Welcome {snapName}</h1>
                 <div id  = "print_name"></div>
                 <h4 className="card-text AsembleFont">Let's Assemble!</h4>
               </center>
@@ -77,7 +81,7 @@ class Create extends Component {
                     type="input"
                     value={this.state.title}
                     className="form-control inputCard"
-                    placeholder="Enter Assembly"
+                    placeholder="Assembly Title"
                     onChange={this.handleInputChange}
                   />
                 </div>
@@ -89,7 +93,7 @@ class Create extends Component {
                     type="input"
                     value={this.state.date}
                     className="form-control inputCard"
-                    placeholder="Enter Assembly"
+                    placeholder="Date and Time (Freeform)"
                     onChange={this.handleInputChange}
                   />
                 </div>
@@ -101,7 +105,7 @@ class Create extends Component {
                     type="input"
                     value={this.state.location}
                     className="form-control inputCard"
-                    placeholder="Enter Assembly"
+                    placeholder="Location"
                     onChange={this.handleInputChange}
                   />
                 </div>

@@ -52,9 +52,9 @@
             document.getElementById('login-button').classList.add('hidden');
             document.getElementById('profile').classList.remove('hidden');
             let snapPic = data['data']['me']['bitmoji']['avatar'];
-            sessionStorage.setItem(snapPic);
-            document.getElementById('welcome').innerHTML =
-              'Welcome, ' + data['data']['me']['displayName'] + '!';
+            sessionStorage.setItem('snapPic', snapPic);
+            let snapName = data['data']['me']['displayName']
+            sessionStorage.setItem('snapName', snapName)
             window.location.pathname = '/create';
           });
         }
